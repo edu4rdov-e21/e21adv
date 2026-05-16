@@ -11,7 +11,7 @@ export default function NotificationPopup({
 }: NotificationPopupProps) {
   return (
     <div
-      className={`absolute bg-white rounded-2xl shadow-2xl ring-1 ring-brown/10 p-4 sm:p-5 animate-popup pointer-events-none ${className}`}
+      className={`absolute bg-cream rounded-2xl shadow-2xl ring-1 ring-gold/40 p-4 sm:p-5 animate-popup pointer-events-none ${className}`}
       style={{ animationDelay: `${delay}s` }}
     >
       <p className="text-[10px] sm:text-xs text-brown/70 font-medium leading-snug tracking-wide font-sans">

@@ -14,7 +14,10 @@ export default function ApplicationForm() {
   }
 
   return (
-    <section id="formulario" className="bg-brown py-20 sm:py-28">
+    <section
+      id="formulario"
+      className="bg-brown-dark py-20 sm:py-28 border-t border-gold/30"
+    >
       <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
         <div ref={ref} className={className}>
           <div className="text-center mb-12">
@@ -25,7 +28,7 @@ export default function ApplicationForm() {
           </div>
 
           {submitted ? (
-            <div className="bg-cream/10 border border-cream/30 rounded-2xl p-10 text-center">
+            <div className="bg-gold/10 border border-gold/40 rounded-2xl p-10 text-center">
               <p className="text-cream text-xl leading-relaxed">
                 {FORM.successMessage}
               </p>
@@ -33,7 +36,7 @@ export default function ApplicationForm() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-cream/5 border border-cream/15 rounded-2xl p-6 sm:p-10 flex flex-col gap-5"
+              className="bg-brown border border-gold/25 rounded-2xl p-6 sm:p-10 flex flex-col gap-5"
               noValidate={false}
             >
               {FORM.fields.map((field) => (
@@ -44,7 +47,7 @@ export default function ApplicationForm() {
                   >
                     {field.label}
                     {field.required && (
-                      <span className="text-cream/60"> *</span>
+                      <span className="text-gold"> *</span>
                     )}
                   </label>
                   <input
@@ -52,7 +55,7 @@ export default function ApplicationForm() {
                     name={field.name}
                     type={field.type}
                     required={field.required}
-                    className="w-full bg-white text-brown rounded-lg px-4 py-3 text-base placeholder:text-brown/40 focus:outline-none focus:ring-2 focus:ring-cream/50"
+                    className="w-full bg-cream text-brown rounded-lg px-4 py-3 text-base placeholder:text-brown/40 focus:outline-none focus:ring-2 focus:ring-gold/60"
                   />
                 </div>
               ))}

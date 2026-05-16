@@ -22,25 +22,25 @@ export default function Hero() {
   const { ref, className } = useFadeIn<HTMLDivElement>();
 
   return (
-    <section className="bg-cream overflow-hidden">
+    <section className="bg-brown overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-16 pb-24 sm:pt-24 sm:pb-32 lg:pt-32 lg:pb-40">
         <div
           ref={ref}
           className={`${className} grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center`}
         >
           <div className="flex flex-col gap-6 sm:gap-8">
-            <span className="inline-flex items-center self-start rounded-full border border-brown/20 px-3 py-1 text-xs font-medium tracking-[0.2em] text-brown uppercase">
+            <span className="inline-flex items-center self-start rounded-full border border-gold/40 px-3 py-1 text-xs font-medium tracking-[0.2em] text-gold uppercase">
               {HERO.badge}
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-brown">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-cream">
               {HERO.headline}
             </h1>
-            <p className="text-lg sm:text-xl text-brown/75 max-w-xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-cream/75 max-w-xl leading-relaxed">
               {HERO.subheadline}
             </p>
             <a
               href={HERO.ctaHref}
-              className="inline-flex items-center justify-center self-start rounded-full bg-brown text-cream px-8 py-4 text-base font-semibold hover:bg-brown-light transition-colors duration-300"
+              className="inline-flex items-center justify-center self-start rounded-full bg-gold text-brown px-8 py-4 text-base font-semibold hover:bg-gold-light transition-colors duration-300"
             >
               {HERO.ctaLabel}
             </a>

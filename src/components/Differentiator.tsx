@@ -8,14 +8,14 @@ export default function Differentiator() {
   const { ref, className } = useFadeIn<HTMLDivElement>();
 
   return (
-    <section className="bg-cream py-20 sm:py-28">
+    <section className="bg-brown py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div ref={ref} className={className}>
           <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-brown mb-6 sm:mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cream mb-6 sm:mb-8">
               {DIFFERENTIATOR.title}
             </h2>
-            <p className="text-lg sm:text-xl text-brown/75 leading-relaxed">
+            <p className="text-lg sm:text-xl text-cream/75 leading-relaxed">
               {DIFFERENTIATOR.body}
             </p>
           </div>

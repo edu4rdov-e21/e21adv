@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${playfairDisplay.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-cream text-brown">
+      <body className="min-h-full flex flex-col bg-brown text-cream">
         {children}
       </body>
     </html>

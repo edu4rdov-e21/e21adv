@@ -1,0 +1,157 @@
+export const BRAND = {
+  name: "E21 ADV",
+  tagline: "Produtora de autoridade digital.",
+} as const;
+
+export const HERO = {
+  badge: "E21 ADV",
+  headline:
+    "O cliente não escolhe o melhor advogado. Escolhe o que ele já conhece.",
+  subheadline:
+    "A E21 constrói uma audiência composta por clientes prontos para contratar seus serviços.",
+  ctaLabel: "Quero agendar minha reunião",
+  ctaHref: "#formulario",
+  videoDescription:
+    "VÍDEO: Compilado de bastidores E21 — várias gravações acontecendo, equipe em ação, advogados gravando, muita coisa rolando ao mesmo tempo",
+  popups: [
+    {
+      id: "notif-1",
+      description:
+        "POPUP 1: notificação WhatsApp/iMessage — \"Quero contratar você\"",
+      position: "top-left",
+    },
+    {
+      id: "notif-2",
+      description:
+        "POPUP 2: notificação Instagram DM — \"Preciso de um advogado\"",
+      position: "top-right",
+    },
+    {
+      id: "notif-3",
+      description:
+        "POPUP 3: notificação genérica — \"Quero agendar uma consulta jurídica\"",
+      position: "bottom-left",
+    },
+    {
+      id: "ig-print",
+      description:
+        "PRINT: tela do Instagram mostrando crescimento de seguidores (gráfico subindo / contador de seguidores)",
+      position: "bottom-right",
+    },
+  ],
+} as const;
+
+export const PAIN_POINTS = {
+  title: "Isso é sobre você?",
+  cards: [
+    "Você posta nas redes sem estratégia e não vê resultado nenhum.",
+    "É excelente no que faz, mas depende de indicação boca a boca pra fechar cliente.",
+    "Já passou por uma agência que só fez panfletagem digital — postou bonito, mas não trouxe cliente.",
+  ],
+} as const;
+
+export const PHOTO_DIVIDER_1 = {
+  description:
+    "FOTO: Visão geral do estúdio E21 — espaço, luzes, câmeras",
+} as const;
+
+export const DIFFERENTIATOR = {
+  title: "Aqui, sua imagem é protagonista",
+  body: "Nada de artes genéricas e panfletagem digital. Na E21, você grava no nosso estúdio com equipe profissional dedicada. O resultado é conteúdo que constrói autoridade de verdade — porque quem te assiste sente a diferença.",
+  photos: [
+    "FOTO: Close da gravação",
+    "FOTO: Bastidor com iluminação",
+    "FOTO: Advogado revisando conteúdo com a equipe",
+  ],
+} as const;
+
+export const HOW_IT_WORKS = {
+  title: "Como funciona",
+  phases: [
+    {
+      tag: "Fase 1",
+      title: "Aceleração",
+      duration: "90 dias",
+      items: [
+        "Consultoria de branding",
+        "Sessão de fotos profissional",
+        "Posicionamento + identidade visual do perfil",
+        "Roteiros + gravação + edição mensal",
+        "Estratégia de conteúdo + calendário editorial",
+      ],
+    },
+    {
+      tag: "Fase 2",
+      title: "Exponenciação",
+      duration: "90 dias",
+      items: [
+        "Produção mensal contínua",
+        "Tráfego pago estratégico",
+        "Funil de conversão (stories, CTAs, agendamento)",
+        "Episódio de podcast",
+      ],
+    },
+  ],
+  photoDescription:
+    "FOTO: Sessão de gravação no estúdio — advogado com microfone",
+  ctaLabel: "Quero entender melhor — agendar reunião",
+  ctaHref: "#formulario",
+} as const;
+
+export const TESTIMONIALS = {
+  title: "Quem já vive isso",
+  items: [
+    {
+      quote: "SUBSTITUIR POR DEPOIMENTO REAL DO ADVOGADO CLIENTE",
+      name: "Dr(a). Nome Sobrenome",
+      specialty: "Área de Atuação",
+      photoDescription: "FOTO DO ADVOGADO",
+    },
+    {
+      quote: "SUBSTITUIR POR DEPOIMENTO REAL DO ADVOGADO CLIENTE",
+      name: "Dr(a). Nome Sobrenome",
+      specialty: "Área de Atuação",
+      photoDescription: "FOTO DO ADVOGADO",
+    },
+    {
+      quote: "SUBSTITUIR POR DEPOIMENTO REAL DO ADVOGADO CLIENTE",
+      name: "Dr(a). Nome Sobrenome",
+      specialty: "Área de Atuação",
+      photoDescription: "FOTO DO ADVOGADO",
+    },
+  ],
+} as const;
+
+export const PHOTO_DIVIDER_2 = {
+  description: "FOTO: Equipe E21 em ação — making of de uma gravação",
+} as const;
+
+export const FORM = {
+  title: "Agende sua reunião",
+  subtitle:
+    "Preencha abaixo. Nossa equipe entra em contato em até 24h pra marcar sua reunião de diagnóstico.",
+  submitLabel: "Quero agendar minha reunião",
+  successMessage:
+    "Pedido recebido! Entraremos em contato em até 24h pra confirmar.",
+  fields: [
+    { name: "nome", label: "Nome completo", type: "text", required: true },
+    { name: "whatsapp", label: "WhatsApp", type: "tel", required: true },
+    {
+      name: "area",
+      label: "Área de atuação",
+      type: "text",
+      required: true,
+    },
+    {
+      name: "instagram",
+      label: "@ do Instagram",
+      type: "text",
+      required: true,
+    },
+  ],
+} as const;
+
+export const FOOTER = {
+  copyright: "E21 Studio © 2026",
+  tagline: "Produtora de autoridade digital.",
+} as const;

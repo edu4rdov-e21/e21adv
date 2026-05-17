@@ -22,35 +22,38 @@ export default function Hero() {
   const { ref, className } = useFadeIn<HTMLDivElement>();
 
   return (
-    <section className="bg-brown overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-16 pb-24 sm:pt-24 sm:pb-32 lg:pt-32 lg:pb-40">
+    <section className="bg-ink overflow-hidden">
+      <div className="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-20 pt-20 pb-28 sm:pt-28 sm:pb-36 lg:pt-36 lg:pb-44">
         <div
           ref={ref}
-          className={`${className} grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center`}
+          className={`${className} grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-center`}
         >
-          <div className="flex flex-col gap-6 sm:gap-8">
-            <span className="inline-flex items-center self-start rounded-full border border-gold/40 px-3 py-1 text-xs font-medium tracking-[0.2em] text-gold uppercase">
+          <div className="flex flex-col gap-7 sm:gap-9">
+            <span className="inline-flex items-center self-start text-[11px] font-medium tracking-[0.18em] text-gray-500 uppercase">
               {HERO.badge}
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-cream">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-ivory">
               {HERO.headline}
             </h1>
-            <p className="text-lg sm:text-xl text-cream/75 max-w-xl leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-500 max-w-xl leading-snug font-normal">
               {HERO.subheadline}
             </p>
             <a
               href={HERO.ctaHref}
-              className="inline-flex items-center justify-center self-start rounded-full bg-gold text-brown px-8 py-4 text-base font-semibold hover:bg-gold-light transition-colors duration-300"
+              className="inline-flex items-center self-start gap-2 bg-ivory text-ink rounded-sm px-5 h-10 text-base font-medium hover:bg-gray-200 transition-colors duration-150"
+              style={{ transitionTimingFunction: "cubic-bezier(0.7, 0, 0.3, 1)" }}
             >
-              {HERO.ctaLabel}
+              <span>{HERO.ctaLabel}</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
 
-          <div className="lg:pl-8">
+          <div className="lg:pl-4">
             <div className="relative">
               <PhotoPlaceholder
                 description={HERO.videoDescription}
                 ratio="4:3"
+                variant="dark"
               />
               {HERO.popups.map((popup, idx) => (
                 <NotificationPopup

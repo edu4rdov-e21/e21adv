@@ -16,38 +16,40 @@ export default function ApplicationForm() {
   return (
     <section
       id="formulario"
-      className="bg-brown-dark py-20 sm:py-28 border-t border-gold/30"
+      className="bg-ink py-24 sm:py-32 lg:py-40 border-t border-gray-800"
     >
-      <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="max-w-3xl mx-auto px-6 sm:px-10 lg:px-20">
         <div ref={ref} className={className}>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cream mb-4">
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl text-ivory mb-4 leading-tight">
               {FORM.title}
             </h2>
-            <p className="text-cream/80 text-lg">{FORM.subtitle}</p>
+            <p className="text-lg sm:text-xl text-gray-500 leading-snug">
+              {FORM.subtitle}
+            </p>
           </div>
 
           {submitted ? (
-            <div className="bg-gold/10 border border-gold/40 rounded-2xl p-10 text-center">
-              <p className="text-cream text-xl leading-relaxed">
+            <div className="border border-gray-800 rounded-md p-10">
+              <p className="text-ivory text-lg leading-snug">
                 {FORM.successMessage}
               </p>
             </div>
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-brown border border-gold/25 rounded-2xl p-6 sm:p-10 flex flex-col gap-5"
+              className="flex flex-col gap-5"
               noValidate={false}
             >
               {FORM.fields.map((field) => (
                 <div key={field.name} className="flex flex-col gap-2">
                   <label
                     htmlFor={field.name}
-                    className="text-cream/90 text-sm font-medium"
+                    className="text-gray-300 text-sm font-normal"
                   >
                     {field.label}
                     {field.required && (
-                      <span className="text-gold"> *</span>
+                      <span className="text-gray-500"> *</span>
                     )}
                   </label>
                   <input
@@ -55,15 +57,18 @@ export default function ApplicationForm() {
                     name={field.name}
                     type={field.type}
                     required={field.required}
-                    className="w-full bg-cream text-brown rounded-lg px-4 py-3 text-base placeholder:text-brown/40 focus:outline-none focus:ring-2 focus:ring-gold/60"
+                    className="w-full bg-ivory text-ink rounded-sm px-4 h-12 text-base placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-150"
+                    style={{ transitionTimingFunction: "cubic-bezier(0.7, 0, 0.3, 1)" }}
                   />
                 </div>
               ))}
               <button
                 type="submit"
-                className="mt-4 bg-gold text-brown font-bold rounded-full px-8 py-4 text-base hover:bg-gold-light transition-colors duration-300"
+                className="mt-6 inline-flex items-center justify-center gap-2 bg-ivory text-ink rounded-sm h-12 px-6 text-base font-medium hover:bg-gray-200 transition-colors duration-150 self-start"
+                style={{ transitionTimingFunction: "cubic-bezier(0.7, 0, 0.3, 1)" }}
               >
-                {FORM.submitLabel}
+                <span>{FORM.submitLabel}</span>
+                <span aria-hidden="true">→</span>
               </button>
             </form>
           )}

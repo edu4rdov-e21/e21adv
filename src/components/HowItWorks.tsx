@@ -8,62 +8,41 @@ export default function HowItWorks() {
   const { ref, className } = useFadeIn<HTMLDivElement>();
 
   return (
-    <section className="bg-brown-dark py-20 sm:py-28">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="bg-ink py-24 sm:py-32 lg:py-40">
+      <div className="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-20">
         <div ref={ref} className={className}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cream text-center mb-14 sm:mb-20">
+          <h2 className="text-2xl sm:text-3xl text-gray-500 max-w-2xl mb-16 sm:mb-20 leading-snug">
             {HOW_IT_WORKS.title}
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-16 sm:mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-gray-800 mb-20 sm:mb-24 border border-gray-800">
             {HOW_IT_WORKS.phases.map((phase, idx) => (
               <div
                 key={idx}
-                className={`rounded-2xl p-8 sm:p-10 border ${
-                  idx === 0
-                    ? "bg-brown border-gold/25"
-                    : "bg-gold border-gold"
-                }`}
+                className="bg-ink p-8 sm:p-12 flex flex-col gap-8"
               >
-                <div
-                  className={`flex items-baseline gap-3 mb-6 ${
-                    idx === 0 ? "text-cream" : "text-brown"
-                  }`}
-                >
-                  <span
-                    className={`text-xs font-semibold tracking-[0.2em] uppercase ${
-                      idx === 0 ? "text-gold" : "text-brown/70"
-                    }`}
-                  >
+                <div className="flex items-baseline gap-3">
+                  <span className="text-xs font-medium tracking-[0.18em] uppercase text-gray-500">
                     {phase.tag}
                   </span>
-                  <span
-                    className={`text-xs ${
-                      idx === 0 ? "text-cream/50" : "text-brown/50"
-                    }`}
-                  >
+                  <span className="text-xs text-gray-700">
                     · {phase.duration}
                   </span>
                 </div>
-                <h3
-                  className={`text-3xl sm:text-4xl mb-8 ${
-                    idx === 0 ? "text-cream" : "text-brown"
-                  }`}
-                >
+                <h3 className="text-2xl sm:text-3xl text-ivory leading-tight">
                   {phase.title}
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-3 sm:space-y-4">
                   {phase.items.map((item, i) => (
                     <li
                       key={i}
-                      className={`flex gap-3 text-base sm:text-lg leading-relaxed ${
-                        idx === 0 ? "text-cream/90" : "text-brown/90"
-                      }`}
+                      className="flex gap-3 text-base sm:text-lg leading-snug text-gray-300"
                     >
                       <span
-                        className={`mt-2 inline-block h-1.5 w-1.5 rounded-full flex-shrink-0 ${
-                          idx === 0 ? "bg-gold" : "bg-brown"
-                        }`}
-                      />
+                        className="text-gray-500 flex-shrink-0"
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -74,6 +53,7 @@ export default function HowItWorks() {
           <PhotoPlaceholder
             description={HOW_IT_WORKS.photoDescription}
             ratio="16:9"
+            variant="dark"
           />
         </div>
       </div>

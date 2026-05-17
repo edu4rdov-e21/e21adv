@@ -8,32 +8,35 @@ export default function Testimonials() {
   const { ref, className } = useFadeIn<HTMLDivElement>();
 
   return (
-    <section className="bg-brown py-20 sm:py-28">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="bg-ivory text-ink py-24 sm:py-32 lg:py-40">
+      <div className="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-20">
         <div ref={ref} className={className}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cream text-center mb-14 sm:mb-20">
+          <h2 className="text-2xl sm:text-3xl text-gray-500 max-w-2xl mb-16 sm:mb-20 leading-snug">
             {TESTIMONIALS.title}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200">
             {TESTIMONIALS.items.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-brown-dark rounded-xl p-8 border border-gold/25 flex flex-col"
+                className="bg-ivory p-8 sm:p-10 flex flex-col"
               >
-                <p className="text-cream/85 text-base sm:text-lg leading-relaxed italic mb-8 flex-1">
+                <p className="font-serif text-xl sm:text-2xl text-ink leading-snug mb-10 flex-1">
                   &ldquo;{item.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 flex-shrink-0">
+                  <div className="w-12 h-12 flex-shrink-0">
                     <PhotoPlaceholder
                       description={item.photoDescription}
                       ratio="1:1"
+                      variant="light"
                       rounded
                     />
                   </div>
                   <div>
-                    <p className="text-cream font-semibold">{item.name}</p>
-                    <p className="text-gold/80 text-sm">{item.specialty}</p>
+                    <p className="text-ink text-sm font-medium">
+                      {item.name}
+                    </p>
+                    <p className="text-gray-500 text-sm">{item.specialty}</p>
                   </div>
                 </div>
               </div>

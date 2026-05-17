@@ -7,22 +7,24 @@ export default function PainPoints() {
   const { ref, className } = useFadeIn<HTMLDivElement>();
 
   return (
-    <section className="bg-brown-dark py-20 sm:py-28">
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="bg-ivory text-ink py-24 sm:py-32 lg:py-40">
+      <div className="max-w-[1728px] mx-auto px-6 sm:px-10 lg:px-20">
         <div ref={ref} className={className}>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-cream text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl text-gray-500 max-w-2xl mb-16 sm:mb-20 leading-snug">
             {PAIN_POINTS.title}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200">
             {PAIN_POINTS.cards.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-brown border border-gold/30 rounded-xl p-8 hover:border-gold/60 transition-all duration-300"
+                className="bg-ivory p-8 sm:p-10 flex flex-col gap-6"
               >
-                <span className="block text-gold text-sm font-semibold mb-4 tracking-[0.2em]">
+                <span className="text-xs font-medium tracking-[0.18em] text-gray-500 uppercase">
                   0{idx + 1}
                 </span>
-                <p className="text-cream text-lg leading-relaxed">{card}</p>
+                <p className="text-ink text-lg sm:text-xl leading-snug">
+                  {card}
+                </p>
               </div>
             ))}
           </div>
